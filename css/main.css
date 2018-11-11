@@ -97,6 +97,87 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Global Styles */
+h1, h2, h3, figcaption {
+  text-transform: uppercase;
+}
+
+section {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 2em;
+}
+
+
+/* Header Section */
+header {
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  padding: 1.5em;
+  z-index: 1;
+
+}
+header h1 {
+  margin: 0;
+  display: inline;
+  letter-spacing: .02em;
+  font-size: 1.6em;
+}
+
+header i {
+  float: right;
+  font-size: 1.6em;
+  padding-top: .1em;
+}
+
+/* Hero Section */
+.hero {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 3em;
+  padding: 0;
+}
+
+.hero a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero h2 {
+  font-size: 5em;
+  line-height: 1em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero h3 {
+  font-size: 2em;
+  font-weight: normal;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  padding: .5em 1em;
+}
+
+.hero img {
+  width: 100%;
+}
+
+
 
 
 
