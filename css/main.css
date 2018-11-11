@@ -112,9 +112,25 @@ h1, h2, h3, figcaption {
 
 section {
   border-bottom: 1px solid #e6e6e6;
-  padding: 2em;
+  padding: 2.5em 1.5em 1.5em 1.5em;
 }
 
+h2 {
+  font-size: 1.4em;
+}
+
+p {
+  font-size: 1.3em;
+}
+
+section section {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
 
 /* Header Section */
 header {
@@ -122,7 +138,7 @@ header {
   color: white;
   position: fixed;
   width: 100%;
-  padding: 1.5em;
+  padding: 1.2em;
   z-index: 1;
 
 }
@@ -130,7 +146,7 @@ header h1 {
   margin: 0;
   display: inline;
   letter-spacing: .02em;
-  font-size: 1.6em;
+  font-size: 1.3em;
 }
 
 header i {
@@ -146,6 +162,7 @@ header i {
   position: relative;
   top: 3em;
   padding: 0;
+  margin-bottom: 3em;
 }
 
 .hero a {
@@ -154,7 +171,7 @@ header i {
 }
 
 .hero h2 {
-  font-size: 5em;
+  font-size: 4em;
   line-height: 1em;
   position: absolute;
   top: 30%;
@@ -163,10 +180,10 @@ header i {
 }
 
 .hero h3 {
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: normal;
   position: absolute;
-  top: 68%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid white;
@@ -176,6 +193,45 @@ header i {
 .hero img {
   width: 100%;
 }
+
+/* Gallery Section */
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.gallery figure {
+  width: 49%;
+  margin: .05em .075em;
+  position: relative;
+
+}
+
+.gallery figure img {
+  opacity: .3;
+}
+
+.gallery figure:hover img {
+  opacity: 100;
+}
+
+.gallery figure figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.gallery figure:hover figcaption {
+  color: white;
+}
+
+
+
 
 
 
