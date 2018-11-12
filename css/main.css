@@ -100,11 +100,14 @@ textarea {
 html {
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
+  position: relative;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+
 /* Global Styles */
 h1, h2, h3, figcaption {
   text-transform: uppercase;
@@ -126,10 +129,15 @@ p {
 section section {
   margin: 0;
   padding: 0;
+  border-bottom: none;
 }
 
 img {
   width: 100%;
+}
+
+main {
+  padding: 5em 0 0 0;
 }
 
 /* Header Section */
@@ -138,7 +146,7 @@ header {
   color: white;
   position: fixed;
   width: 100%;
-  padding: 1.2em;
+  padding: 1.4em;
   z-index: 1;
 
 }
@@ -158,36 +166,51 @@ header i {
 /* Hero Section */
 .hero {
   color: white;
-  text-align: center;
   position: relative;
-  top: 3em;
   padding: 0;
-  margin-bottom: 3em;
+  max-height: 660px;
+  overflow: hidden;
 }
+
 
 .hero a {
   color: white;
   text-decoration: none;
 }
 
+.hero .text-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 50%;
+  text-align: center;
+
+}
+
 .hero h2 {
   font-size: 4em;
   line-height: 1em;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
 }
 
 .hero h3 {
   font-size: 1.7em;
   font-weight: normal;
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: 2px solid white;
   padding: .5em 1em;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero h3:hover {
+  background-color: white;
+}
+
+.hero a:hover {
+  color: black;
 }
 
 .hero img {
@@ -230,6 +253,11 @@ header i {
   color: white;
 }
 
+/* Footer section */
+footer {
+  padding: .2em;
+  text-align: center;
+}
 
 
 
