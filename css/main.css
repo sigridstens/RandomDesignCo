@@ -126,12 +126,6 @@ p {
   font-size: 1.3em;
 }
 
-section section {
-  margin: 0;
-  padding: 0;
-  border-bottom: none;
-}
-
 img {
   width: 100%;
 }
@@ -207,6 +201,7 @@ header i {
 
 .hero h3:hover {
   background-color: white;
+  color: black;
 }
 
 .hero a:hover {
