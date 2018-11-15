@@ -109,17 +109,14 @@ html {
 
 
 /* Global Styles */
-h1, h2, figcaption {
+h1, h2, figcaption, .main-nav {
   text-transform: uppercase;
+  font-size: 1.4em;
 }
 
 section {
   border-bottom: 1px solid #e6e6e6;
-  padding: 2.5em 1.5em 1.5em 1.5em;
-}
-
-h2 {
-  font-size: 1.4em;
+  padding: 1em;
 }
 
 p {
@@ -127,34 +124,33 @@ p {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 main {
-  padding: 4em 0 0 0;
+  padding: 3em 0 0 0;
 }
 
 /* Header Section */
-header {
+.page-header {
   background-color: black;
   color: white;
   position: fixed;
   width: 100%;
-  padding: 1.4em;
+  top: 0;
+  left: 0;
   z-index: 1;
 
 }
-header h1 {
+.page-header h1 {
   margin: 0;
-  display: inline;
-  letter-spacing: .02em;
-  font-size: 1.3em;
+  padding: 1em;
 }
 
-header i {
-  float: right;
-  font-size: 1.6em;
-  padding-top: .1em;
+.page-header .main-nav {
+  position: absolute;
+  right: 1em;
+  top: 1em;
 }
 
 /* Hero Section */
@@ -174,23 +170,25 @@ header i {
 
 .hero .text-overlay {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 50%;
   text-align: center;
+  line-height: 1;
 
 }
 
 .hero h2 {
   font-size: 4em;
   line-height: 1em;
+  margin-top: 0;
 
 }
 
-.hero h3 {
+.hero #btn {
+  display: inline-block;
   font-size: 1.7em;
-  font-weight: normal;
   border: 2px solid white;
   padding: .5em 1em;
   width: fit-content;
@@ -199,12 +197,9 @@ header i {
   transform: translate(-50%, -50%);
 }
 
-.hero h3:hover {
-  background-color: white;
-  color: black;
-}
 
-.hero a:hover {
+.hero #btn:hover {
+  background-color: white;
   color: black;
 }
 
@@ -219,18 +214,20 @@ header i {
 }
 
 .gallery figure {
-  width: 49%;
-  margin: .05em .075em;
+  flex-basis: 50%;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.62);
+  border: 1px solid white;
+  margin: 0;
+}
 
+.gallery figure:hover {
+  background-color: hsla(0, 0%, 0%, 0.5);
 }
 
 .gallery figure img {
-  opacity: .3;
-}
-
-.gallery figure:hover img {
-  opacity: 100;
+  position: relative;
+  z-index: -10;
 }
 
 .gallery figure figcaption {
@@ -244,7 +241,14 @@ header i {
   font-size: 1.4em;
 }
 
-.gallery figure:hover figcaption {
+.gallery figure figcaption a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.gallery figure:hover figcaption a {
   color: white;
 }
 
